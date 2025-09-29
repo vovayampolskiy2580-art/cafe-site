@@ -1,0 +1,60 @@
+/* Сайт розроблено студентом <ІМ'Я>, група <ГРУПА> */
+:root{
+  --primary:#5c3aff;
+  --accent:#ffb703;
+  --bg:#0f0f12;
+  --card:#17171c;
+  --text:#e8e8ef;
+  --muted:#a7a7b4;
+  --success:#39d98a;
+  --danger:#ff6b6b;
+  --maxw:1100px;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:24px}
+.header{position:sticky;top:0;z-index:10;background:rgba(15,15,18,.7);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #24242a}
+.header .inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.brand .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));box-shadow:var(--shadow)}
+nav ul{display:flex;list-style:none;margin:0;padding:0;gap:10px;flex-wrap:wrap}
+nav a{padding:10px 14px;border-radius:10px;border:1px solid transparent}
+nav a.active, nav a:hover{border-color:#2a2a33;background:#1a1a22}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;margin-top:24px}
+.card{background:var(--card);border:1px solid #262630;border-radius:var(--radius);box-shadow:var(--shadow)}
+.card.pad{padding:22px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.kpi{padding:16px;border-radius:12px;background:#1d1d26;border:1px solid #2a2a33;text-align:center}
+.kpi b{font-size:22px;display:block}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #2a2a33;background:#1b1b22;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--primary),#7c5bff);border-color:#3d3d78;color:white}
+.btn.ghost{background:#1b1b22;color:var(--text)}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.badge{display:inline-block;padding:4px 10px;border:1px solid #2a2a33;border-radius:999px;font-size:.85rem;color:var(--muted)}
+.price{font-weight:800}
+footer{margin-top:40px;border-top:1px solid #24242a}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;color:var(--muted);font-size:.95rem;flex-wrap:wrap}
+.input, select, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2a2a33;background:#14141a;color:var(--text)}
+label{display:block;margin:10px 0 6px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:12px;border-bottom:1px solid #2a2a33;text-align:left}
+.table tfoot td{font-weight:700}
+.notice{padding:12px 14px;border-radius:12px;background:#14141a;border:1px solid #2a2a33;color:var(--muted)}
+.success{color:var(--success)}
+.error{color:var(--danger)}
+.small{font-size:.9rem;color:var(--muted)}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .kpis{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}

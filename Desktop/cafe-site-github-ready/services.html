@@ -1,0 +1,62 @@
+<!-- Сайт розроблено студентом <ІМ'Я>, група <ГРУПА> -->
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAFÉ NOVA — Послуги</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>CAFÉ NOVA</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card pad">
+      <h1>Меню і динамічний калькулятор</h1>
+      <p class="small">Дані меню зберігаються у вигляді масиву JavaScript і відображаються без перезавантаження сторінки.</p>
+      <div class="card pad" style="overflow:auto">
+        <table class="table" id="services-table">
+          <thead>
+            <tr>
+              <th>Позиція</th>
+              <th>Теги</th>
+              <th>Ціна</th>
+              <th>Кількість</th>
+              <th>Сума</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr><td colspan="4" style="text-align:right"><b>Разом:</b></td><td><span id="sum">₴0.00</span></td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="small"><b>Виконавець:</b> <span data-auth></span></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> CAFÉ NOVA</div>
+      <div class="small">Автор: <span id="footer-auth"></span></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

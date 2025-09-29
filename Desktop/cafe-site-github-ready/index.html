@@ -1,0 +1,64 @@
+<!-- Сайт розроблено студентом <ІМ'Я>, група <ГРУПА> -->
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAFÉ NOVA — Головна</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>CAFÉ NOVA</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card pad">
+        <h1>Спешелті‑кав'ярня у вашому районі</h1>
+        <p>Готуємо каву третьої хвилі, випічку щоденного випікання та десерти від локальних партнерів. Все — швидко, стабільно, без черг.</p>
+        <div class="kpis">
+          <div class="kpi"><b>10 хв</b><span class="small">середній час відвідування</span></div>
+          <div class="kpi"><b>30+</b><span class="small">постійних гостей щодня</span></div>
+          <div class="kpi"><b>4.9★</b><span class="small">рейтинг якості</span></div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="services.html">Меню та ціни</a>
+          <a class="btn ghost" href="contact.html">Зворотний зв'язок</a>
+        </div>
+      </div>
+      <figure class="card" style="overflow:hidden">
+        <img alt="Кава та круасан" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" />
+      </figure>
+    </section>
+
+    <section class="card pad" style="margin-top:20px">
+      <h2>Про нас</h2>
+      <p>Наш фокус — стабільність смаку, чиста рецептура та прозора комунікація з гостями. Забігайте зранку за еспресо to‑go або сідайте в нас на обід із сендвічем та десертом.</p>
+      <p class="small"><b>Виконавець:</b> <span data-auth></span></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> CAFÉ NOVA</div>
+      <div class="small">Автор: <span id="footer-auth"></span></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
